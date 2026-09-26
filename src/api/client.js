@@ -1,7 +1,5 @@
 // Determine API Base URL: directly connect to backend on port 5001 in dev, or use /api proxy
-const API_BASE = (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'))
-  ? 'https://leave-management-backend-vua9.onrender.com/api'
-  : '/api';
+const API_BASE = 'https://leave-management-backend-vua9.onrender.com/api';
 
 export async function fetchApi(endpoint, options = {}) {
   const url = `${API_BASE}${endpoint}`;
